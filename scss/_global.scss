@@ -1,4 +1,21 @@
-*{
+::-webkit-scrollbar {
+    width: 10px;
+    height: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 40%);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: white;
+    border-radius: 20px;
+}
+
+
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -6,6 +23,7 @@
     text-decoration: none;
 }
 
-body{
+body {
     font-family: "Montserrat", serif;
+    background-color: var(--clr-white);
 }

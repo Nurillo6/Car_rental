@@ -52,7 +52,7 @@
 }
 
 .swiper__content-wrapper {
-    width: 416px;
+    max-width: 416px;
     margin: 0 auto;
 }
 .swiper__title {
@@ -76,8 +76,7 @@
     height: 36px !important;
     border-radius: 50%;
     background-color: white;
-    @include Display();
-    justify-content: center;
+    @include Display($space:center);
     color: #000 !important;
 }
 
@@ -91,7 +90,7 @@
     margin-top: -33px;
     position: relative;
     width: 600px;
-    @include Display();
+    @include Display($space:start);
     background-color: white;
     border-radius: 100px;
     overflow: hidden;
@@ -119,4 +118,36 @@
     background-color: var(--clr-green);
     border: none;
     color: white;
+}
+
+// 0 - 1053px Tablet part , Planshetlarda qanday korinishi
+@media (max-width:1053px){
+    .swiper-slide{
+        background-position: center;
+    }
+    .swiper-slide:nth-child(1){
+        background-image: url("../../images/hero-tablet.png");
+    }
+}
+
+// 0 - 730px Mobile holati , Telefonlar holati
+@media (max-width:730px){
+    .swiper-slide{
+        padding-top: 40px;
+    }
+    .swiper-slide:nth-child(1){
+        background-image: url("../../images/hero-mobile.png");
+    }
+    .hero__form{
+        width: 100%;
+    }
+    .swiper-pagination{
+        display: flex;
+        justify-content: center;
+        transform: translate(0, -40px) !important;
+    }
+    .swiper__title{
+        font-size: 24px;
+        line-height: 29.26px;
+    }
 }
